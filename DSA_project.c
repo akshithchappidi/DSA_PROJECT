@@ -1,6 +1,13 @@
 #include<stdio.h>
 #include<malloc.h>
 #include<stdlib.h>
+#define MALLOC(p,s,t)\
+p=(t)malloc(s);\
+if(p==NULL)\
+{ \
+printf("insufficient memeory\n"); \
+exit;\
+}
 struct job{
     char skill[50];// name of the skill req for the job
     float skill_strength;// how much grip the person need to have.
